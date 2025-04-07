@@ -45,10 +45,26 @@
     display: flex;
     gap: 3rem;
 }
+
 .nav__link{
     color: var(--color-grey);
     text-decoration: none;
     display: block;
+    position: relative;
+}
+.nav__link:hover{
+    color: white;
+}
+.nav__link:hover::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-pink);
+    margin-top: 5px;
+
 }
 
 
@@ -77,6 +93,8 @@
 }
 .buttons{
     display: flex;
+    align-items: center;
+    gap: 10px;
 
 }
 .button__pink{
@@ -89,12 +107,30 @@
     border-top-right-radius: 1rem;
     border-bottom-right-radius:1rem ;
     
+    
+}
+.button__pink:hover{
+    background-color: var(--color-grey);
 }
 .button{
     display: block;
     padding: 1rem 4rem;
     color: var(--color-white);
     font-family: var(--font-text2);
+    text-decoration: underline;
+}
+.button span{
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+.button:hover{
+    padding: .6rem 3rem;
+    background-color: var(--color-grey);
+    color: var(--color-white);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius:1rem ;
+
 }
 .services{
     margin-top: 7rem;
